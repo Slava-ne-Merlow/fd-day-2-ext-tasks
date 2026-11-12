@@ -1,7 +1,7 @@
 plugins { id 'org.jetbrains.kotlin.jvm' version '2.0.21' }
 repositories { mavenCentral() }
-def taskId = providers.gradleProperty('task').getOrElse('07-1')
-def ids = ['07-1', '07-2', '08-1', '08-2', '26-1', '26-2']
+def taskId = providers.gradleProperty('task').getOrElse('05-1')
+def ids = ['05-1', '05-2', '08-1', '08-2', '26-1', '26-2']
 if (!ids.contains(taskId)) throw new GradleException("Неизвестная задача: $taskId. Доступны: $ids")
 kotlin { compilerOptions { jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17 } }
 java { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
